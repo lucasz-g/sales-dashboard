@@ -30,6 +30,7 @@ def revenue_by_state_bar(revenue_by_state, limit=10):
         title=f"Top {limit} states by revenue",
         color="Preço",
         color_continuous_scale=COLOR_SCALE,
+        labels={"Preço": "Revenue (R$)", "Local da compra": "State"},
     )
     figure.update_layout(xaxis_title="State", yaxis_title="Revenue (R$)")
     return figure
@@ -43,6 +44,7 @@ def revenue_by_category_bar(revenue_by_category):
         title="Revenue by category",
         color="Preço",
         color_continuous_scale=COLOR_SCALE,
+        labels={"Preço": "Revenue (R$)", "Local da compra": "State"},
     )
     figure.update_layout(xaxis_title="Category", yaxis_title="Revenue (R$)")
     return figure
@@ -58,6 +60,7 @@ def monthly_revenue_line(monthly_revenue):
         line_dash="Ano",
         category_orders={"Mês": MONTH_ORDER},
         title="Monthly Revenue",
+        labels={"Preço": "Revenue (R$)", "Local da compra": "State"},
     )
     figure.update_layout(yaxis_title="Revenue (R$)")
     return figure
